@@ -1,0 +1,36 @@
+graph TD
+    A["5.5 读写文件"] --> B["模型保存"]
+    B --> B1["参数保存"]
+    B --> B2["模型结构保存"]
+    B --> B3["检查点保存"]
+    
+    A --> C["模型加载"]
+    C --> C1["参数加载"]
+    C --> C2["模型结构加载"]
+    C --> C3["检查点加载"]
+    
+    A --> D["文件格式"]
+    D --> D1["PyTorch格式"]
+    D1 --> D1a[".pt/.pth"]
+    D1 --> D1b[".ckpt"]
+    D --> D2["TensorFlow格式"]
+    D2 --> D2a[".h5"]
+    D2 --> D2b[".pb"]
+    
+    A --> E["数据序列化"]
+    E --> E1["JSON格式"]
+    E --> E2["YAML格式"]
+    E --> E3["二进制格式"]
+    
+    A --> F["框架实现"]
+    F --> F1["PyTorch实现"]
+    F1 --> F1a["torch.save"]
+    F1 --> F1b["torch.load"]
+    F --> F2["TensorFlow实现"]
+    F2 --> F2a["model.save"]
+    F2 --> F2b["tf.keras.models.load_model"]
+    
+    A --> G["最佳实践"]
+    G --> G1["版本控制"]
+    G --> G2["文件组织"]
+    G --> G3["错误处理"] 

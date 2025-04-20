@@ -1,0 +1,31 @@
+graph TD
+    A["3.3 线性回归的简洁实现"] --> B["使用深度学习框架"]
+    B --> B1["PyTorch实现"]
+    B1 --> B1a["nn.Linear"]
+    B1 --> B1b["nn.MSELoss"]
+    B1 --> B1c["torch.optim"]
+    B --> B2["TensorFlow实现"]
+    B2 --> B2a["tf.keras.layers.Dense"]
+    B2 --> B2b["tf.keras.losses.MSE"]
+    B2 --> B2c["tf.keras.optimizers"]
+    
+    A --> C["数据准备"]
+    C --> C1["数据加载"]
+    C --> C2["数据预处理"]
+    C --> C3["数据迭代器"]
+    
+    A --> D["模型定义"]
+    D --> D1["网络层定义"]
+    D --> D2["损失函数定义"]
+    D --> D3["优化器定义"]
+    
+    A --> E["训练过程"]
+    E --> E1["前向传播"]
+    E --> E2["计算损失"]
+    E --> E3["反向传播"]
+    E --> E4["参数更新"]
+    
+    A --> F["模型评估"]
+    F --> F1["训练集评估"]
+    F --> F2["测试集评估"]
+    F --> F3["可视化结果"] 

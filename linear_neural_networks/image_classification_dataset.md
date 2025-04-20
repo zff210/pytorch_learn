@@ -1,0 +1,33 @@
+graph TD
+    A["3.5 图像分类数据集"] --> B["常用数据集"]
+    B --> B1["MNIST"]
+    B --> B2["Fashion-MNIST"]
+    B --> B3["CIFAR-10"]
+    B --> B4["ImageNet"]
+    
+    A --> C["数据加载"]
+    C --> C1["PyTorch数据加载"]
+    C1 --> C1a["torchvision.datasets"]
+    C1 --> C1b["DataLoader"]
+    C --> C2["TensorFlow数据加载"]
+    C2 --> C2a["tf.data.Dataset"]
+    C2 --> C2b["tf.keras.datasets"]
+    
+    A --> D["数据预处理"]
+    D --> D1["图像变换"]
+    D1 --> D1a["调整大小"]
+    D1 --> D1b["标准化"]
+    D1 --> D1c["数据增强"]
+    D --> D2["标签处理"]
+    D2 --> D2a["独热编码"]
+    D2 --> D2b["标签平滑"]
+    
+    A --> E["数据可视化"]
+    E --> E1["图像显示"]
+    E --> E2["标签分布"]
+    E --> E3["数据统计"]
+    
+    A --> F["数据迭代器"]
+    F --> F1["批量加载"]
+    F --> F2["随机打乱"]
+    F --> F3["并行加载"] 
